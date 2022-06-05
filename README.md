@@ -32,27 +32,40 @@
 
 * 安装 FastDFS  和 libfastcommon 程序库；
 
-* 配置 /etc/fdfs 下的 tracker.conf、storage.conf、client.conf  文件；（配置参考 \server\conf 的文件 ）
+* 在家目录创建 fastdfs 文件夹，存放集群所有内容；
+* .
+├── client
+├── storage
+└── tracker
+
+* 配置 /etc/fdfs 下的 tracker.conf、storage.conf、client.conf  文件；（配置可参考 \server\conf 中的文件，配置前先备份）
 
 3、配置 Nginx
 
 * 安装 Nginx + PCRE库 + zlib库 + OpenSSL开发库，配置、编译、安装；
 
-* 向 Nginx 中编译 fastdfds-nginx-module 模块；
+* 向 Nginx 中编译 fastdfds-nginx-module 模块，可以通过Nginx访问FastDFS；
 
-* 向 Nginx 中编译 ngx_http_fastcgi_module模块；
+* 向 Nginx 中编译 ngx_http_fastcgi_module 模块，使得 Nginx 将接收到的请求转发给后台 FastCGI 进行处理；
 
 * 搭建 FastCGI 程序运行环境：编译与安装 cgi 开发库，安装 FasiCGI 进程管理器 spawn-fcgi；
 
-* 配置 /usr/local/nginx/conf 下的 nginx.conf 文件；（配置参考 /server/conf/nginx.conf ）
+* 配置 /usr/local/nginx/conf 下的 nginx.conf 文件；（配置可参考 /server/conf/nginx.conf，配置前先备份）
 
-4、服务端部署
+4、服务端部署（server 目录）
 
 * 配置 conf/ 目录下的 cfg.json 文件；
 
+* chmod 赋予所有脚本可执行权限；
+
+* 输入命令编译服务端程序；
+make clean
+sudo ldconfig 
+sudo make
+
 * 编译服务端程序， ./start.sh 启动服务端；
 
-5、客户端部署
+5、客户端部署（client 目录）
 
 * Qt Creator 打开 cloudDisk.pro ，启动客户端；
 
