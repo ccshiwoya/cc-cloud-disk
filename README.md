@@ -36,7 +36,7 @@
 * 安装 FastDFS  和 libfastcommon 程序库；
 
 * 在家目录创建 fastdfs 文件夹，存放 FastDFS 集群所有内容；
-* .
+
 ├── client
 
 ├── storage
