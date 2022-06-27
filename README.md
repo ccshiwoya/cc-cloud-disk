@@ -68,8 +68,11 @@
 * chmod 赋予所有脚本可执行权限；
 
 * 编译服务端程序；
+
 make clean
+
 sudo ldconfig 
+
 sudo make
 
 * ./start.sh 启动服务端；
