@@ -83,9 +83,3 @@ sudo make
 
 * Qt Creator 打开 cloudDisk.pro ，启动客户端；
 
-
-
-
-项目参考：
-------------
-[1] https://github.com/dongyusheng/cloud-disk
